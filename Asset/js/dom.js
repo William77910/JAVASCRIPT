@@ -185,7 +185,7 @@ form.addEventListener('submit', function(e){
 })
 
 //2 Afficher le texte saisi en temps réel
-nomInput.addEventListener('input', function(){
+nomInput.addEventListener('input', function(this){
 	if(this.value.trim() === '') {
 		resultat.textContent = 'En attente de saisi....';
 		resultat.style.color = 'gray';
