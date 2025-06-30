@@ -20,5 +20,5 @@ FIN
 function calculCarre() {
     let nombre = parseFloat(prompt("Entrez un nombre:"));  // parseFloat trensforme le string en nombre
     let carre = nombre * nombre;
-    console.log(`Le carré de ${nombre} est : ${carre}`);  //
+    console.log(`Le carré de ${nombre} est : ${carre}`);  // 
 }
