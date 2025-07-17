@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercice 3</title>
+  <style>
+    .carte {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+    }
+    .important {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="conteneur"></div>
+  
+  <script>
+    // À compléter : créez et insérez des éléments
+    // 1. Créez 3 "cartes" (div avec classe "carte")
+    const conteneur = document.getElementById('conteneur');
+    for (let i = 1; i <= 3; i++) {  //  Boucle pour créer 3 cartes
+      // Création de la carte
+      const carte = document.createElement('div');
+      carte.className = 'carte';
+      
+      // 2. Chaque carte doit contenir un titre h3 et un paragraphe
+      const titre = document.createElement('h3');
+      titre.textContent = `Titre de la carte ${i}`;  // Titre de la carte i 
+      carte.appendChild(titre);  // Ajout du titre à la carte
+      
+      const paragraphe = document.createElement('p');
+      paragraphe.textContent = `Contenu de la carte ${i}. Ceci est un exemple de paragraphe.`;
+      carte.appendChild(paragraphe);  // Ajout du paragraphe à la carte
+      
+      // 3. Ajoutez la classe "important" au titre de la deuxième carte
+      if (i === 2) {
+        titre.classList.add('important');
+      }
+      
+      // 4. Insérez toutes les cartes dans le conteneur
+      conteneur.appendChild(carte);  // Ajout de la carte au conteneur
+    }
+    
+  </script>
+</body>
+</html>

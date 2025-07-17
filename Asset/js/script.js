@@ -166,4 +166,97 @@ debugger; // Point d'arrêt pour le débogage
  console.error() : Affiche un message d'erreur eu rouge
  console.warm() : Affiche un avertissement (en jaune)
  debugger : Créer un point d'arrêt pour le débogage dans les outils de développement
+
+ Méthodes principales pour sélectionner des éléments :
+
+    getElementById() - Sélectionne un élément par son attribut ID
+    const element = document.getElementById("monId");
+
+    getElementsByClassName() - Sélectionne des éléments par leur classe
+    const elements = document.getElementsByClassName("maClasse");
+
+    getElementsByTagName() - Sélectionne des éléments par leur balise
+    const paragraphes = document.getElementsByTagName("p");
+
+    querySelector() - Sélectionne le premier élément correspondant à un sélecteur CSS
+    const element = document.querySelector(".maClasse");
+
+    querySelectorAll() - Sélectionne tous les éléments correspondant à un sélecteur CSS
+    const elements = document.querySelectorAll("div.conteneur p");
+
+    Modification du contenu
+    textContent - Modifie le contenu textuel d'un élément
+    element.textContent = " Nouveau texte";
+
+    innerHTML - Modifie le contenu HTML d'un élément
+    element.innerHTML = "<strong>Texte en gras</strong>";
+
+    value - Modifie la valeur d'un champ de formulaire
+    document.getElementById("monInput").value = "
+
+    Création et insertion d'éléments
+    Créer des éléments :
+        createElement() - Crée un nouvel élément HTML
+        const nouveauParagraphe = document.createElement("p");
+
+        createTextNode() - Crée un nœud de texte
+        const texte = document.createTextNode("Mon texte");
+
+    Insérer des éléments :
+
+        appendChild() - Ajoute un élément comme dernier enfant
+        parent.appendChild(enfant);
+
+        insertBefore() - Insère un élément avant un élément de référence
+        parent.insertBefore(nouvelElement, elementReference);
+
+        append() - Peut ajouter plusieurs nœuds et chaînes de texte
+        parent.append(enfant1, "Du texte", enfant2);
+
+        prepend() - Insère au début de l'élément parent
+        parent.prepend(enfant);
+
+        insertAdjacentElement() - Insère à une position spécifique
+        element.insertAdjacentElement('beforebegin', nouvelElement);
+          --  Positions possibles: 'beforebegin', 'afterbegin', 'beforeend'
+
+        Manipulation des attributs
+        setAttribute() - Définit un attribut
+        element.setAttribute("class", "nouvelle-classe");
+
+        getAttribute() - Récupère la valeur d'un attribut
+        const valeur = element.getAttribute("href");
+
+        removeAttribute() - Supprime un attribut
+        element.removeAttribute("disabled");
+
+        Accès direct à certains attributs
+        element.id = "nouveauId";
+        element.className = "nouvelle-classe";
+        element.href = "https://example.com";
+
+
+Gestion des classes
+        classList.add() - Ajoute une classe
+        element.classList.add("nouvelle-classe");
+
+        classList.remove() - Supprime une classe
+        element.classList.remove("ancienne-classe");
+
+        classList.toggle() - Ajoute ou supprime une classe
+        element.classList.toggle("active");
+
+        classList.contains() - Vérifie si une classe existe
+        if (element.classList.contains("important")) {
+
+          --  Faire quelque chose
+
+        }
+
+        Suppression d'éléments
+        remove() - Supprime un élément
+        element.remove();
+
+        removeChild() - Supprime un élément enfant
+        parent.removeChild(enfant);
 */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercice 1</title>
+</head>
+<body>
+  <h1 id="titre">Titre principal</h1>
+  <p class="paragraphe">Premier paragraphe</p>
+  <p class="paragraphe important">Deuxième paragraphe</p>
+  <div class="conteneur">
+    <p>Paragraphe dans un conteneur</p>
+  </div>
+  
+  <script>
+    // À compléter : sélectionnez les éléments de différentes façons
+
+    // 1. Sélectionnez l'élément avec l'id "titre"
+    const titre = document.getElementById('titre');
+      // autre méthode :
+      const titreQuery = document.querySelector('#titre');
+
+    // 2. Sélectionnez tous les éléments avec la classe "paragraphe"
+    const paragraphes = document.getElementsByClassName('paragraphe');
+    console.log(paragraphes);  // Affiche une collection HTML
+      // autre méthode :
+      const paragraphesQuerySelector = document.querySelectorAll('.paragraphe');
+      console.log(paragraphesQuerySelector);  // Affiche une NodeList
+
+    // 3. Sélectionnez le paragraphe qui a à la fois la classe "paragraphe" et "important"
+    const paragrapheImportant = document.querySelector('.paragraphe.important');
+    console.log(paragrapheImportant);  // Affiche le paragraphe important
+
+    // 4. Sélectionnez le paragraphe dans le conteneur
+    const paragrapheConteneur = document.querySelector('.conteneur p');
+    console.log(paragrapheConteneur);  //  Affiche le paragraphe dans le conteneur
+    
+  </script>
+</body>
+</html>

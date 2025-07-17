@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercice 2</title>
+  </head>
+  <body>
+    <h1 id="titre">Titre original</h1>
+    <p id="para1">Texte à modifier</p>
+    <div id="conteneur">Contenu initial</div>
+    <input type="text" id="monInput" value="Valeur initiale" />
+
+    <script>
+      // À compléter : modifiez le contenu des éléments
+
+      // 1. Changez le texte du titre
+      const titre = document.getElementById("titre");
+      titre.textContent = "Nouveau Titre";
+
+      // 2. Ajoutez du texte en gras au paragraphe
+      const para1 = document.getElementById("para1");
+      para1.innerHTML = "Texte à <strong>modifier</strong>";
+
+      // 3. Remplacez le contenu du div par une liste non ordonnée avec 3 éléments
+      const conteneur = document.getElementById("conteneur");
+      conteneur.innerHTML =
+        `<ul>
+          <li>Élément 1</li>
+          <li>Élément 2</li>
+          <li>Élément 3</li>
+        </ul>`;
+
+      // 4. Modifiez la valeur de l'input
+      const monInput = document.getElementById("monInput");
+      monInput.value = "Nouvelle valeur";
+      
+    </script>
+  </body>
+</html>
